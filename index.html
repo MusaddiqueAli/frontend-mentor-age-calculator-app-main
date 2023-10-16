@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <script src="./app.js" type="module"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+  <main class="card">
+    <form id="form">
+      <div class="input_block">
+        <div class="block">
+          <label for="day">DAY</label>
+          <input type="number" id="day" placeholder="DD">
+          <small class="error_day"></small>
+        </div>
+        <div class="block">
+          <label for="month">MONTH</label>
+          <input type="number" id="month" placeholder="MM">
+          <small class="error_month"></small>
+        </div>
+        <div class="block">
+          <label for="year">YEAR</label>
+          <input type="number" id="year" placeholder="YYYY">
+          <small class="error_year"></small>
+        </div>
+        <div class="block check">
+          <label for="endDate">Include end date (1 day is added)</label>
+          <input type="checkbox" id="endDate">
+        </div>
+      </div>
+      
+      <div class="submit_block">
+        <hr>
+        <button type="submit" id="calculate" aria-label="Calculate">
+          <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="1.5"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+        </button>
+      </div>
+    </form>
+
+    <div class="output_block">
+      <h1><span id="YY">--</span> years</h1>
+      <h1><span id="MM">--</span> months</h1>
+      <h1><span id="DD">--</span> days</h1>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by 
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a href="https://github.com/MusaddiqueAli" target="_blank">Musaddique Ali</a>.
+  </div>
+</body>
+</html>
