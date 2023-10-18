@@ -144,7 +144,22 @@ parentInputBlock.addEventListener("input", function (event) {
       error_year.textContent = "Must be in the past";
       calculateButton.disabled = true;
       calculateButton.style.backgroundColor = "hsl(0, 1%, 44%)";
-    } else {
+    } 
+    else if ((+input_year.value === currentYear) && (+input_month.value > currentMonth)) {
+      labels[1].style.color = "hsl(0, 100%, 67%)";
+      input_month.style.borderColor = "hsl(0, 100%, 67%)";
+      error_month.textContent = "Must be in the past";
+      calculateButton.disabled = true;
+      calculateButton.style.backgroundColor = "hsl(0, 1%, 44%)";
+    }
+    else if ((+input_year.value === currentYear) && (+input_month.value === currentMonth) && (+input_day.value > currentDay)) {
+      labels[0].style.color = "hsl(0, 100%, 67%)";
+      input_day.style.borderColor = "hsl(0, 100%, 67%)";
+      error_day.textContent = "Must be in the past";
+      calculateButton.disabled = true;
+      calculateButton.style.backgroundColor = "hsl(0, 1%, 44%)";
+    }
+    else {
       calculateButton.disabled = false;
       calculateButton.style.backgroundColor = "hsl(259, 100%, 65%)";
     }
